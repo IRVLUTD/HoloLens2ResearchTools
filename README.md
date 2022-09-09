@@ -20,10 +20,27 @@ It serves as a streamer server publishing Depth AHaT and PV camera streamings vi
 
 ## [UnityHL2Streamer](UnityProjects\UnityHL2Streamer)
 The Unity Project demo to publish AHaT and PV streamings.
+A compiled app file is provided [here](UnityProjects\UnityHL2Streamer\App\UnityHL2Streamer_1.0.0.0_arm64.msixbundle), we could install it in Hololens Windows Device Portal.
+- `Views > Apps > Deploy apps > Local Storage > Choose File > Install`
 
-## [HL2StreamingCient.py](PythonScripts\HL2StreamingCient.py)
-A demo script for subscribe streamings from HoloLens 2 streamer.
+![app_install_1](docs/resources/unity_project/app_install_1.png)
+![app_install_2](docs/resources/unity_project/app_install_2.png)
+
+## PythonScripts
+- [HL2StreamingCient.py](PythonScripts\HL2StreamingCient.py)
+  A demo script for subscribe streamings from HoloLens 2 streamer.
 ![client_demo](docs/resources/python_client_demo.png)
+
+- [HoloLens2_ROS_Publisher.py](PythonScripts\HoloLens2_ROS_Publisher.py)
+  A demo Publisher script used in ROS to register streamings from HoloLens2 and publish as topics.
+  ```shell
+  # Publish color streaming
+  python3 HoloLens2_ROS_Publisher.py --host <HoloLens_IP_Addr> --sensor_type color
+  # Publish depth streaming
+  python3 HoloLens2_ROS_Publisher.py --host <HoloLens_IP_Addr> --sensor_type depth
+  ```
+  By detecting color sensor's position using AprilTag, people could visualize hololens's pose in real time with RVIZ tool.
+  ![ros_publisher_demo](docs/resources/hololens2_ROS_publisher_demo.gif)
 
 ## Setup the Developer Environment
 

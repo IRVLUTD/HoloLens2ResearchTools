@@ -1,7 +1,6 @@
 import sys, os
 import socket
 import struct
-import csv
 from collections import namedtuple
 import numpy as np
 import cv2
