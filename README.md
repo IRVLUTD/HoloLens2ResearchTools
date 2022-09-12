@@ -72,8 +72,10 @@ If you would like to modify the codes of [`HL2ResearchModeUnityPlugin`](https://
 
 ## Notes
 - How to get rig2depth transform matrix?
+
   Build and run the [StreamRecorder](https://github.com/microsoft/HoloLens2ForCV/tree/main/Samples/StreamRecorder) sample on HoloLens 2, you could find the `Depth Long Throw_extrinsics.txt` file under `System->FileExplorer->LocalAppData->StreamRecorder->LocalState` via Device Portal.
 - How to extract point cloud from depth image?
+
   HoloLens does not provide intrinsic of Depth camera, they provide a look-up-table `.bin` file to reconstruct point cloud.
   - For long throw depth, build and run the [StreamRecorder](https://github.com/microsoft/HoloLens2ForCV/tree/main/Samples/StreamRecorder) sample on HoloLens 2, you could find the `Depth Long Throw_lut.bin` file under `System->FileExplorer->LocalAppData->StreamRecorder->LocalState` via Device Portal.
   - For AHaT depth, modify code for AHaT depth, then build and run the [StreamRecorder](https://github.com/microsoft/HoloLens2ForCV/tree/main/Samples/StreamRecorder) sample on HoloLens 2, you could find the `Depth AHaT_lut.bin` file under `System->FileExplorer->LocalAppData->StreamRecorder->LocalState` via Device Portal.
