@@ -28,14 +28,14 @@ The Unity Project demo to publish AHaT and PV streamings.
 
 
 - PythonScripts
-  - [HL2StreamingCient.py](PythonScripts\HL2StreamingCient.py)
+  - [HL2StreamingCient.py](PythonScripts/HL2StreamingCient.py)
   A demo script for subscribing streamings from HoloLens 2.
   ```shell
   python3 HL2StreamingCient.py
   ```
   ![client_demo](docs/resources/python_client_demo.png)
 
-  - [HoloLens2_ROS_Publisher.py](PythonScripts\HoloLens2_ROS_Publisher.py)
+  - [HoloLens2_ROS_Publisher.py](PythonScripts/HoloLens2_ROS_Publisher.py)
     A demo Publisher script used in ROS to register streamings from HoloLens2 and publish as topics.
     ```shell
     # Publish color streaming
@@ -48,7 +48,7 @@ The Unity Project demo to publish AHaT and PV streamings.
 
 ## How to Install the App in HoloLens
 ### Method One: use the pre-built app
-The **[pre-built app](UnityProjects\UnityHL2Streamer\App\UnityHL2Streamer_1.0.0.0_arm64.msixbundle)** will publish AHaT frames via port 10091 and PV frames via port 10090.
+The **[pre-built app](UnityProjects/UnityHL2Streamer/App/UnityHL2Streamer_1.0.0.0_arm64.msixbundle)** will publish AHaT frames via port 10091 and PV frames via port 10090.
 You could install it in HoloLens 2 Windows Device Portal:
 - `Views > Apps > Deploy apps > Local Storage`
 - Click `Choose File` to select the downloaded app file
@@ -59,7 +59,7 @@ You could install it in HoloLens 2 Windows Device Portal:
 ![app_install_2](docs/resources/unity_project/app_install_2.png)
 
 ### Method Two: build the App step by step
-If you would like to modify the codes of [`HL2ResearchModeUnityPlugin`](https://github.com/IRVLUTD/HoloLens2ResearchTools/tree/main/HL2ResearchModeUnityPlugin) to change the streaming ports or streaming data type, one could follow the [`how_to_build.md`](doc/../docs/how_to_build.md) to build & deploy the APP.
+If you would like to modify the codes of [`HL2ResearchModeUnityPlugin`](https://github.com/IRVLUTD/HoloLens2ResearchTools/tree/main/HL2ResearchModeUnityPlugin) to change the streaming ports or streaming data type, one could follow the [`how_to_build.md`](docs/how_to_build.md) to build & deploy the APP.
 
 ## How to Use
 
