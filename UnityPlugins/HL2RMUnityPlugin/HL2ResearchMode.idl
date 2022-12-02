@@ -1,0 +1,74 @@
+namespace HL2UnityPlugin
+{
+    runtimeclass HL2ResearchMode
+    {
+        HL2ResearchMode();
+
+        UInt16 GetCenterDepth();
+        UInt16[] GetDepthMapBuffer();
+        UInt8[] GetDepthMapTextureBuffer();
+        UInt16[] GetShortAbImageBuffer();
+        UInt8[] GetShortAbImageTextureBuffer();
+        UInt16[] GetLongAbImageBuffer();
+        UInt8[] GetLongAbImageTextureBuffer();
+        Single[] GetPointCloudBuffer();
+
+        UInt16[] GetLongDepthMapBuffer();
+        UInt8[] GetLongDepthMapTextureBuffer();
+        Single[] GetLongThrowPointCloudBuffer();
+
+        UInt8[] GetLFCameraBuffer(out Int64 ts);
+        UInt8[] GetRFCameraBuffer(out Int64 ts);
+        UInt8[] GetLRFCameraBuffer(out Int64 ts_left, out Int64 ts_right);
+        
+        Single[] GetAccelSample();
+        Single[] GetGyroSample();
+        Single[] GetMagSample();
+
+        Single[] GetCenterPoint();
+        Int32 GetDepthBufferSize();
+        Int32 GetLongDepthBufferSize();
+        String PrintDepthResolution();
+        String PrintDepthExtrinsics();
+		String PrintLFResolution();
+		String PrintLFExtrinsics();
+		String PrintRFResolution();
+		String PrintRFExtrinsics();
+
+        Boolean DepthMapTextureUpdated();
+        Boolean ShortAbImageTextureUpdated();
+        Boolean LongAbImageTextureUpdated();
+        Boolean PointCloudUpdated();
+        Boolean LongDepthMapTextureUpdated();
+        Boolean LongThrowPointCloudUpdated();
+
+		Boolean LFImageUpdated();
+		Boolean RFImageUpdated();
+        Boolean AccelSampleUpdated();
+        Boolean GyroSampleUpdated();
+        Boolean MagSampleUpdated();
+
+
+        void InitializeDepthSensor();
+        void InitializeLongDepthSensor();
+        void InitializeSpatialCamerasFront();
+        void InitializeAccelSensor();
+        void InitializeGyroSensor();
+        void InitializeMagSensor();
+
+        void StartDepthSensorLoop();
+        void StartDepthSensorLoop(Boolean reconstructPointCloud);
+        void StartLongDepthSensorLoop();
+        void StartLongDepthSensorLoop(Boolean reconstructPointCloud);
+		void StartSpatialCamerasFrontLoop();
+        void StartAccelSensorLoop();
+        void StartGyroSensorLoop();
+        void StartMagSensorLoop();
+
+        void StopAllSensorDevice();
+
+        void SetReferenceCoordinateSystem(Windows.Perception.Spatial.SpatialCoordinateSystem refCoord);
+        void SetPointCloudRoiInSpace(Single centerX, Single centerY, Single centerZ, Single boundX, Single boundY, Single boundZ);
+        void SetPointCloudDepthOffset(UInt16 offset);
+    }
+}
